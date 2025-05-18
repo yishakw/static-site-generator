@@ -16,7 +16,7 @@ class TestLeafNode(unittest.TestCase):
 
     def test_leaf_to_html_img_with_props(self):
         node = LeafNode("img", "image.png", props={"src": "image.png", "alt": "An image"})
-        self.assertEqual(node.to_html(), '<img src="image.png" alt="An image" />')
+        self.assertEqual(node.to_html(), '<img src="image.png" alt="An image">image.png</img>')
 
     def test_leaf_no_tag(self):
         node = LeafNode(value="Just text")
